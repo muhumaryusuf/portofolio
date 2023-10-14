@@ -65,6 +65,62 @@ section::before {
     display: none;
 }
 
+.work::before {
+    content: 'Work';
+}
+
+.work-img {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "work-1 work-2" "work-3 work-3";
+    gap: 16px;
+}
+
+.work-img img {
+    width: 100%;
+}
+
+.work-img-item {
+    position: relative;
+}
+
+.work-img-item:hover::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#work1 {
+    grid-area: work-1;
+}
+
+#work1:hover::after {
+    content: 'Web Project';
+}
+
+#work2 {
+    grid-area: work-2;
+}
+
+#work2:hover::after {
+    content: 'Software Project';
+}
+
+#work3 {
+    grid-area: work-3;
+}
+
+#work3:hover::after {
+    content: 'Software Project';
+}
 
 @keyframes upDown {
     0% {
